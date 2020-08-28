@@ -1,49 +1,63 @@
 body {
   background: green;
 }
-div {
+/*div {
   border: 1px solid black;
-}
+}*/
 .flex-container {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-items: stretch;
-  /*justify-content: space-between;*/
-  /*flex-flow: column nowrap;*/ /* Flex Flow - A Shorthand for Flex-direction and Flex-wrap */
 }
 .card {
+  text-align: center;
   background: white;
   margin: auto;
   height: 400px;
   width: 250px;
   padding: 20px;
   border-radius: 10px;
+  font-size: 80px;
 }
+/*
 .top-suit {
+  font-size: 80px;
   content: "\2665";
+  font-family: "fas fa-heartbeat";
 }
-
+*/
 .card::before {
   position: relative;
   font-size: 80px;
-  top: -80px;
-  left: -10px;
-  content: "\2663";
+  top: -70px;
+  left: -110px;
 }
 .card::after {
   position: relative;
   font-size: 80px;
   top: 60px;
-  right: -210px;
-  content: "\2665";
+  right: -110px;
+  transform: rotate(180deg);
 }
 
-.Hearts {
+.hearts::before,
+.hearts::after {
+  color: red;
+  content: "\2665";
 }
-.Spades {
+.spades::before,
+.spades::after {
+  color: black;
+  content: "\2660";
 }
-.Clubs {
+.clubs::before,
+.clubs::after {
+  color: black;
+  content: "\2663";
 }
-.Diamonds {
+.diamonds::before,
+.diamonds::after {
+  color: red;
+  content: "\2666";
 }

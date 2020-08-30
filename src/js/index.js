@@ -1,9 +1,16 @@
 import "../style/styles.css";
 
 window.onload = function() {
-  document.querySelector(".card").classList.add(generateRandomCardSuit());
-  document.querySelector(".card").innerHTML = generateRandomCardNumber();
+  generateRandomCardOn("#card1");
+  generateRandomCardOn("#card2");
+  generateRandomCardOn("#card3");
 };
+
+function generateRandomCardOn(htmlCardId) {
+  console.log("generating card: " + htmlCardId);
+  document.querySelector(htmlCardId).classList.add(generateRandomCardSuit());
+  document.querySelector(htmlCardId).innerHTML = generateRandomCardNumber();
+}
 
 function generateRandomCardSuit() {
   const arrSuits = ["hearts", "spades", "clubs", "diamonds"];
